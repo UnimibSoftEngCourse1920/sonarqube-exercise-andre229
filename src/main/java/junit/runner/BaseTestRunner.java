@@ -194,10 +194,11 @@ public abstract class BaseTestRunner implements TestListener {
      * Truncates a String to the maximum length.
      */
     public static String truncate(String s) {
+        String str = "";
         if (fgMaxMessageLength != -1 && s.length() > fgMaxMessageLength) {
-            s = s.substring(0, fgMaxMessageLength) + "...";
+            str = s.substring(0, fgMaxMessageLength) + "...";
         }
-        return s;
+        return str;
     }
 
     /**
